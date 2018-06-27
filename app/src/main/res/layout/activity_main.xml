@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+               >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Welcome to our QuizApp"
+                    android:textSize="40sp"
+                    android:layout_margin="40dp"
+                    android:textColor="#920525f2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test your IQ"
+                    android:textSize="30sp"
+                    android:textStyle="italic"
+                    android:textColor="#20b1ff"
+                    android:layout_marginLeft="80dp" />
+
+            </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="Please first identify yourself here"
+                    android:textSize="20sp"
+                    android:textColor="#1a4ee9"
+                    android:paddingLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:hint="Enter your name" />
+                <EditText
+                    android:id="@+id/email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:hint="Enter your email address here" />
+
+                <EditText
+                    android:id="@+id/tel_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:hint="Enter your telephone number" />
+
+            </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question Number 1"
+                    android:textSize="20sp"
+                    android:textColor="#1a4ee9"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Which amongst these is a script language"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/c_1_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C#" />
+                    <RadioButton
+                        android:id="@+id/java_1_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Java" />
+
+                    <RadioButton
+                        android:id="@+id/php_1_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHP"
+                        android:onClick="answer1"             />
+                    <RadioButton
+                        android:id="@+id/python_1_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Python" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question Number 2"
+                    android:textSize="20sp"
+                    android:textColor="#1a4ee9"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Which amongst these are Object oriented languages"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"/>
+
+               <CheckBox
+                   android:id="@+id/java_check"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Java"
+                   android:clickable="true"
+                   android:onClick="answer2"/>
+
+                <CheckBox
+                    android:id="@+id/c_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:clickable="true"
+                    android:onClick="answer2"/>
+
+                <CheckBox
+                    android:id="@+id/php_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHP"
+                    android:clickable="true"
+                    android:onClick="answer2"/>
+
+                <CheckBox
+                    android:id="@+id/python_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Python"
+                    android:clickable="true"
+                    android:onClick="answer2"/>
+
+                <CheckBox
+                    android:id="@+id/c_sharp_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C#"
+                    android:clickable="true"
+                    android:onClick="answer2"/>
+
+
+            </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question number 3"
+                    android:textSize="20sp"
+                    android:textColor="#1a4ee9"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Which programming language is best suited for Machine Learning?"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/q3_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:hint="Enter your answer here" />
+
+                </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question Number 4"
+                    android:textSize="20sp"
+                    android:textColor="#1a4ee9"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Which among these are CMS"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"/>
+
+                <CheckBox
+                    android:id="@+id/wordpress_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WordPress"
+                    android:clickable="true"
+                    android:onClick="answer4"/>
+
+                <CheckBox
+                    android:id="@+id/drupal_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drupal"
+                    android:clickable="true"
+                    android:onClick="answer4"/>
+
+                <CheckBox
+                    android:id="@+id/jsf_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JSF"
+                    android:clickable="true"/>
+
+                <CheckBox
+                    android:id="@+id/spring_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spring"
+                    android:clickable="true"/>
+
+                <CheckBox
+                    android:id="@+id/joomla_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Joomla"
+                    android:clickable="true"
+                    android:onClick="answer4"/>
+
+
+            </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question Number 5"
+                    android:textSize="20sp"
+                    android:textColor="#1a4ee9"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What does 'IoT' stand for?"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/wrong1_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Information on Technology"/>
+                    <RadioButton
+                        android:id="@+id/wrong2_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inside of Terminal"/>
+
+                    <RadioButton
+                        android:id="@+id/right_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Internet of Things"
+                        android:onClick="answer5"/>
+                    <RadioButton
+                        android:id="@+id/wrong3_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Internet of Technology"/>
+
+                </RadioGroup>
+
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+
+                <Button
+                    android:id="@+id/submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUBMIT QUIZ"
+                    android:onClick="results"/>
+
+
+            </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="#1a4ee9"
+    android:layout_marginBottom="20dp"/>
+
+
+            <ImageView
+                android:id="@+id/congrat_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/thumbs" />
+            <ImageView
+                android:id="@+id/try_again_image"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/try_again" />
+
+            <TextView
+                android:id="@+id/poor"
+                android:layout_gravity="right"
+                android:text="Sorry, you did not pass the quiz. Please try again"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                android:typeface="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#f7031f"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/correction_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See Correction"
+                        android:visibility="invisible"
+                        android:onClick="quizCorrection"
+                        android:textColor="#0089bb"/>
+
+                        <Button
+                            android:id="@+id/detail_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Detailed results"
+                            android:visibility="invisible"
+                            android:onClick="detailedResults"
+                            android:textColor="#0089bb" />
+            </LinearLayout>
+            <Switch
+                android:id="@+id/results_switch"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send results through email"
+                android:visibility="invisible"
+                android:onClick="sendMail"/>
+
+
+        </LinearLayout>
+
+
+</ScrollView>
